@@ -1,0 +1,54 @@
+{
+  "name": "my-app",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@emotion/react": "^11.11.4",
+    "@emotion/styled": "^11.11.5",
+    "@mobiscroll/react-lite": "^4.10.9",
+    "@szhsin/react-accordion": "^1.2.4",
+    "@testing-library/jest-dom": "^6.4.5",
+    "@testing-library/react": "^15.0.7",
+    "@testing-library/user-event": "^14.5.2",
+    "bootstrap": "^5.3.3",
+    "file-saver": "^2.0.5",
+    "mathjs": "^12.4.2",
+    "react": "^18.3.1",
+    "react-bootstrap-icons": "^1.11.4",
+    "react-data-table-component": "^7.6.2",
+    "react-dom": "^18.3.1",
+    "react-modal": "^3.16.1",
+    "react-multi-date-picker": "^4.5.1",
+    "react-router-dom": "^6.23.1",
+    "react-scripts": "^5.0.1",
+    "read-excel-file": "^5.8.1",
+    "sass": "^1.77.2",
+    "styled-components": "^6.1.11",
+    "web-vitals": "^4.0.0",
+    "xlsx": "^0.18.5"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}

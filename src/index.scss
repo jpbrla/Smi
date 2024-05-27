@@ -1,0 +1,315 @@
+@import "./var.scss";
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+body {
+  margin: 0;
+  font-family: "Lato", sans-serif !important;
+  font-weight: 400 !important;
+}
+
+p {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.fc-primary {
+  color: $c-primary;
+}
+.fc-red {
+  color: $c-red;
+}
+.fc-lightgrey {
+  color: $c-lightgrey;
+}
+.fc-grey {
+  color: $c-grey;
+}
+.fc-darkgrey {
+  color: $c-darkgrey;
+}
+.fc-black {
+  color: $c-black;
+}
+.fc-green {
+  color: $c-green;
+}
+.fc-white {
+  color: $c-white;
+}
+
+.f-thin {
+  font-weight: 100;
+  font-style: normal;
+}
+
+.f-light {
+  font-weight: 300;
+  font-style: normal;
+}
+
+.f-regular {
+  font-weight: 400;
+  font-style: normal;
+}
+
+.f-bold {
+  font-weight: 700;
+  font-style: normal;
+}
+
+.f-black {
+  font-weight: 900;
+  font-style: normal;
+}
+
+.f-thin-italic {
+  font-weight: 100;
+  font-style: italic;
+}
+
+.f-light-italic {
+  font-weight: 300;
+  font-style: italic;
+}
+
+.f-regular-italic {
+  font-weight: 400;
+  font-style: italic;
+}
+
+.f-bold-italic {
+  font-weight: 700;
+  font-style: italic;
+}
+
+.f-black-italic {
+  font-weight: 900;
+  font-style: italic;
+}
+
+.text-ellipsis {
+  text-overflow: ellipsis !important;
+}
+
+.text-style-bold {
+  font-weight: bold !important;
+}
+
+.text-style-italic {
+  font-style: italic !important;
+}
+
+.text-style-underline {
+  text-decoration: underline !important;
+}
+
+.border-red {
+  border-color: $c-red !important;
+}
+
+.border-green {
+  border-color: $c-green !important;
+}
+
+.border-black {
+  border-color: $c-black !important;
+}
+
+.border-darkgrey {
+  border-color: $c-darkgrey !important;
+}
+
+.border-lightgrey {
+  border-color: $c-lightgrey !important;
+}
+
+.border-grey {
+  border-color: $c-grey !important;
+}
+
+.border-none {
+  border: none !important;
+}
+
+.bordered-1 {
+  border-width: 1px;
+  border-style: solid;
+}
+
+.bordered-2 {
+  border-width: 2px;
+  border-style: solid;
+}
+
+.dash-border {
+  padding: 5px;
+  border: 1px dashed $c-grey;
+}
+
+.title-border {
+  border-top: 2px solid $c-darkgrey;
+  border-bottom: 2px solid $c-darkgrey;
+}
+
+.bg-lightgrey {
+  background-color: $c-lightgrey !important;
+}
+
+.bg-grey {
+  background-color: $c-grey !important;
+}
+
+.bg-darkgrey {
+  background-color: $c-darkgrey !important;
+}
+
+.bg-red {
+  background-color: $c-red !important;
+}
+
+.bg-green {
+  background-color: $c-green !important;
+}
+
+.bg-prim {
+  background-color: $c-primary !important;
+}
+
+.bg-orange {
+  background-color: $c-orange !important;
+}
+
+.r-0 {
+  right: 0 !important;
+}
+
+.w-20 {
+  width: 20% !important;
+}
+
+.w-40 {
+  width: 40% !important;
+}
+
+.w-60 {
+  width: 60% !important;
+}
+
+.h-100vh {
+  height: 100vh !important;
+}
+
+.centeredX {
+  margin-left: 50%;
+  transform: translateX(-50%);
+}
+
+.centeredY {
+  margin-top: 50%;
+  transform: translateY(-50%);
+}
+
+.rotate-90 {
+  transform: rotate(90deg);
+}
+
+.grid-col-3 {
+  display: grid !important;
+  grid-template-columns: 1fr 1fr 1fr;
+
+  li {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0px 10px;
+  }
+}
+
+//////////////////////////////////////////////////
+/// Custom Checkbox Item
+/// //////////////////////////////////////////////
+.checkbox-item {
+  display: flex;
+  align-items: center;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 5px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+.checkbox-item input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark-checkbox, .checkmark-radio {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  height: 25px;
+  width: 25px;
+  background-color: #eee;
+}
+
+.checkmark-radio {
+  border-radius: 50%;
+}
+
+/* On mouse-over, add a grey background color */
+.checkbox-item:hover input ~ .checkmark-checkbox,
+.checkbox-item:hover input ~ .checkmark-radio {
+  background-color: #ccc;
+}
+
+/* When the checkbox is checked, add a blue background */
+.checkbox-item input:checked ~ .checkmark-checkbox,
+.checkbox-item input:checked ~ .checkmark-radio {
+  background-color: #2196F3;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark-checkbox:after, .checkmark-radio:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.checkbox-item input:checked ~ .checkmark-checkbox:after,
+.checkbox-item input:checked ~ .checkmark-radio:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.checkbox-item .checkmark-checkbox:after {
+  left: 10px;
+  top: 3px;
+  width: 7px;
+  height: 15px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.checkbox-item .checkmark-radio:after {
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: $c-white;
+}

@@ -1,0 +1,168 @@
+@import "../../var.scss";
+
+.page-new {
+    width: 100%;
+    height: auto;
+    position: relative;
+
+    & .main-form {
+        & .form-section {
+            height: auto;
+            border: 1px solid;
+            border-radius: 3px;
+            position: relative;
+        }
+        & .input-control {
+            width: 100%;
+            border: none;
+            outline: none;
+            font-size: 20px;
+            background-color: $c-white;
+            &::placeholder {
+                color: $c-grey;
+            }
+            &.dashed-border {
+                width: 60%;
+                border-bottom: 2px dashed $c-primary;
+            }
+        }
+
+        & .label {
+            color: $c-grey;
+        }
+
+        & .editor-action-btn {
+            background-color: transparent;
+            border: none;
+        }
+
+        & .select-file-btn {
+            border: none;
+            background-color: $c-primary;
+            padding: 5px 10px;
+            margin-right: 10px;
+            border-radius: 5px;
+            color: $c-white;
+
+            &:active {
+                background-color: rgba($color: $c-primary, $alpha: 0.5);
+            }
+        }
+        & .submit-btn {
+            border: none;
+            border-radius: 5px;
+            color: $c-white;
+            font-size: 25px;
+            padding: 10px 20px;
+
+            &.cursor-not-allowed {
+                cursor: not-allowed !important;
+            }
+        }
+
+        & .dropdown-menu-btn {
+            width: auto;
+            position: absolute;
+            right: 0;
+            padding: 0px 10px;
+            font-size: 18px;
+            color: $c-white;
+            border: none;
+            border-radius: 20px;
+            background-color: $c-grey;
+        }
+
+        & .dropdown-content {
+            width: 100%;
+            position: absolute;
+            top: 105%;
+            border: 2px solid $c-red;
+            background-color: $c-white;
+            z-index: 1;
+            display: none;
+            transition: height .3s;
+
+            &.expand {
+                display: block;
+            }
+
+            & button {
+                width: auto;
+                padding: 0px 10px;
+                font-size: 15px;
+                color: $c-white;
+                border: none;
+                border-radius: 20px;
+            }
+
+            & .dropdown-menus {
+                width: 100%;
+                padding: 5px;
+                background-color: $c-white;
+                list-style: none;
+                margin: 0;
+
+                & > li {
+                    font-style: italic !important;
+                    color: $c-grey;
+                }
+                & > li:hover {
+                    background-color: rgba($color: $c-primary, $alpha: 0.12);
+                }
+            }
+        }
+
+        & .file-board {
+            width: 100%;
+            height: auto;
+
+            .file-list {
+                width: 100%;
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 5px;
+            }
+        }
+
+        & .calc-img {
+            width: 30px;
+        }
+
+        textarea {
+            width: 100%;
+            padding: 0px 5px;
+            border: none;
+            outline: none;
+            line-height: 1.5rem;
+            resize: none;
+            background:
+                repeating-linear-gradient(to right , transparent 0 5px, white 0 8px),
+                repeating-linear-gradient(to bottom, transparent 0 calc(1.5em - 2px), $c-lightgrey 0 1.5em) transparent;
+
+            &::placeholder {
+                color: $c-grey;
+            }
+        }
+    }
+}
+.calc-btn {
+    border: none;
+    background-color: $c-primary;
+    color: $c-white;
+    padding: 10px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+.ReactModal__Content {
+    width: 30%;
+    inset: 0 !important;
+    position: relative !important;
+    margin-left: 50%;
+    transform: translateX(-50%);
+}
+
+@media (max-width: 768px) {
+    .ReactModal__Content {
+        width: 90%;
+    }
+}

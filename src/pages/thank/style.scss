@@ -1,0 +1,15 @@
+@import "../../var.scss";
+
+.page-thank {
+    width: 100%;
+    height: auto;
+
+    .submit-btn {
+        border: none;
+        background-color: $c-darkgrey;
+        color: $c-white;
+        font-size: 25px;
+        font-weight: bold;
+        border-radius: 10px;
+    }
+}
