@@ -121,7 +121,7 @@ const CreateReportPage = () => {
     };
 
     return (
-        <div className="page-report">
+        <div className="page-report px-10">
             <p className="w-100 fs-20 fc-primary f-bold text-center">Suggested Methods Improvement (SMI)</p>
             <p className="f-bold fs-20 fc-primary text-center mt-20 title-border py-1">Report</p>
             <div className="d-flex flex-column">

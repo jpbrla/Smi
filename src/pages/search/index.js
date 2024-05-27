@@ -102,7 +102,7 @@ const SearchPage = () => {
     }
 
     return (
-        <div className="page-search d-flex flex-column align-items-center">
+        <div className="page-search d-flex flex-column align-items-center px-10">
             <p className="w-100 fs-20 fc-primary f-bold text-center">Suggested Methods Improvement (SMI)</p>
             <p className="w-100 f-bold fs-20 fc-primary text-center mt-20 title-border py-1">Search</p>
             <form className="search-form w-100 px-10">

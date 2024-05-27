@@ -4,7 +4,7 @@ import "./style.scss"
 
 const UserDashboardPage = () => {
     return (
-        <div className="page-dashboard">
+        <div className="page-dashboard px-10">
             <p className="w-100 fs-20 fc-primary f-bold text-center">Suggested Methods Improvement (SMI)</p>
             <div className="w-100 d-flex justify-content-center mt-20">
                 <p className="w-75 py-10 bg-prim text-center fs-25 f-bold fc-white">User Dashboard</p>

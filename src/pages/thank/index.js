@@ -3,7 +3,7 @@ import "./style.scss"
 
 const ThankPage = () => {
     return (
-        <div className="page-thank">
+        <div className="page-thank px-10">
             <p className="w-100 fs-20 fc-primary f-bold text-center">Suggested Methods Improvement (SMI)</p>
             <div className="mt-30 d-flex flex-column py-20 px-3 bordered-2 border-grey rounded-4">
                 <p className="w-100 text-center fs-25 fc-primary f-bold">Thanks!</p>

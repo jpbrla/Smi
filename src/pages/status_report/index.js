@@ -2,7 +2,7 @@ import React from "react";
 
 const StatusReportPage = () => {
     return (
-        <div className="page-status">
+        <div className="page-status px-10">
             <p className="w-100 fs-20 fc-primary f-bold text-center">Suggested Methods Improvement (SMI)</p>
             <div className="w-100 d-flex justify-content-center mt-20">
                 <p className="w-50 py-10 bg-lightgrey text-center fs-20">Status Report</p>

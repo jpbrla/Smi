@@ -1,1 +1,1 @@
-# smi-app
+# mernstack-project

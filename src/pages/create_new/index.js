@@ -86,7 +86,7 @@ const CreateNewPage = () => {
     }
 
     return (
-        <div className="page-new">
+        <div className="page-new px-10">
             <p className="w-100 fs-20 fc-primary f-bold text-center">Suggested Methods Improvement (SMI)</p>
             <p className="f-bold fs-20 fc-primary text-center mt-20 title-border py-1">Create New</p>
             <form className="main-form mt-20">
