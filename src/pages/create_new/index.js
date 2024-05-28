@@ -107,7 +107,7 @@ const CreateNewPage = () => {
                             className="input-control px-10 py-2"
                             type="text"
                             name="origins"
-                            placeholder="Additional Originator(s)"
+                            placeholder="Additional Originator(s),"
                             value={origins}
                             onChange={(e) => setOrigins(e.target.value)} />
                         <span className="fs-16 position-absolute r-0 fc-grey f-regular-italic mr-5">(Use comma between names)</span>
