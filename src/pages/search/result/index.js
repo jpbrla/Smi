@@ -74,7 +74,7 @@ const SearchResultPage = () => {
                                     <p className="fs-12 w-60 f-regular fc-darkgrey">Implemented on 03/08/24</p>
                                 </div>
                                 <div className="d-flex justify-content-center my-20">
-                                    <button className="">Open Full Details</button>
+                                    <button type="button" onClick={() => window.location.href = "/statusreport"}>Open Full Details</button>
                                 </div>
                             </div>
                         </div>
