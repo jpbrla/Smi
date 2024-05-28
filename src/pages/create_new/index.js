@@ -271,7 +271,7 @@ const CreateNewPage = () => {
                     </div>
                     <p className="w-100 text-center fs-16 fc-darkgrey f-regular-italic mt-10">
                     {
-                        isSubmitAvailable ? "You will receive an email confirming this has been posted." : "This button will turn blue when the form is complete."
+                        isSubmitAvailable ? "You will receive an email confirming this has been posted." : "This button will turn Bobrick blue when the form is complete."
                     }
                     </p>
                 </div>
