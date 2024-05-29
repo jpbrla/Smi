@@ -230,7 +230,7 @@ const SearchPage = () => {
                             }
                         </ul>
                         <div className="d-flex flex-column align-items-center">
-                            <button type="button" className={"py-2 fs-20 fc-white w-50" + (improve_area === "" ? " bg-grey" : " bg-green")} onClick={() => setAreaDropdownOpen(false)}>DONE</button>
+                            <button type="button" className={"py-2 fs-20 fc-white w-50" + (improve_area === "" ? " bg-grey" : " bg-primary")} onClick={() => setAreaDropdownOpen(false)}>DONE</button>
                         </div>
                     </div>
                 </div>
@@ -273,7 +273,7 @@ const SearchPage = () => {
                             }
                         </ul>
                         <div className="d-flex flex-column align-items-center">
-                            <button type="button" className={"py-2 fs-20 fc-white w-50" + (division.length === 0 ? " bg-grey" : " bg-green")} onClick={() => setDivisionDropdownOpen(false)}>DONE</button>
+                            <button type="button" className={"py-2 fs-20 fc-white w-50" + (division.length === 0 ? " bg-grey" : " bg-primary")} onClick={() => setDivisionDropdownOpen(false)}>DONE</button>
                         </div>
                     </div>
                 </div>
@@ -306,7 +306,7 @@ const SearchPage = () => {
                             }
                         </ul>
                         <div className="d-flex flex-column align-items-center">
-                            <button type="button" className={"py-2 fs-20 fc-white w-50" + (stage === "" ? " bg-grey" : " bg-green")} onClick={() => setStageDropdownOpen(false)}>DONE</button>
+                            <button type="button" className={"py-2 fs-20 fc-white w-50" + (stage === "" ? " bg-grey" : " bg-primary")} onClick={() => setStageDropdownOpen(false)}>DONE</button>
                         </div>
                     </div>
                 </div>
@@ -317,8 +317,8 @@ const SearchPage = () => {
             </form>
             <div className={"dropdown-content position-fixed scrollable w-auto h-100vh top-0" + (department.length === 0 ? " border-red" : " border-green") + (isDepartDropdownOpen ? " expand" : "")}>
                 <div className="d-flex justify-content-around py-1">
-                    <p className="fs-20 fc-grey f-regular-italic">Select one that best suits your SMI</p>
-                </div>
+                    <p className="fs-18 fc-grey f-regular-italic">Choose the Departments to add to this report</p>
+                </div> 
                 <ul className="dropdown-menus px-30" style={{height: '85%', overflowY: "auto"}}>
                     {
                         departmentList.map((value, i) => {
@@ -335,7 +335,7 @@ const SearchPage = () => {
                 </ul>
                 <div className="d-flex flex-column align-items-center">
                     <hr />
-                    <button type="button" className={"py-2 fs-20 fc-white w-50" + (department.length === 0 ? " bg-grey" : " bg-green")} onClick={() => setDepartDropdownOpen(false)}>DONE</button>
+                    <button type="button" className={"py-2 fs-20 fc-white w-50" + (department.length === 0 ? " bg-grey" : " bg-primary")} onClick={() => setDepartDropdownOpen(false)}>DONE</button>
                 </div>
             </div>
         </div>
