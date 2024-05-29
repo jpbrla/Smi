@@ -22,12 +22,12 @@ const SearchResultPage = () => {
                                 </div>
                                 <hr/>
                                 <div className="d-flex">
-                                    <p className="fs-12 w-40 text-end pr-10 f-bold fc-black">SMI Number</p>
-                                    <p className="fs-12 w-60 f-regular fc-darkgrey">11106</p>
+                                    <p className="fs-13 w-40 text-end pr-10 f-bold fc-black">SMI Number</p>
+                                    <p className="fs-13 w-60 f-regular fc-darkgrey">11106</p>
                                 </div>
                                 <div className="d-flex">
-                                    <p className="fs-12 w-40 text-end pr-10 f-bold fc-black">Date Created</p>
-                                    <p className="fs-12 w-60 f-regular fc-darkgrey">02/01/24</p>
+                                    <p className="fs-14 w-40 text-end pr-10 f-bold fc-black">Date Created</p>
+                                    <p className="fs-14 w-60 f-regular fc-darkgrey">02/01/24</p>
                                 </div>
                                 <div className="d-flex">
                                     <p className="fs-12 w-40 text-end pr-10 f-bold fc-black">Date Updated</p>
