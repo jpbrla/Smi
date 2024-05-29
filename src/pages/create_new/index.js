@@ -243,7 +243,7 @@ const CreateNewPage = () => {
                     <div className={"form-section d-flex flex-column p-1" + (cost_description==="" ? " border-red" : " border-green")}>
                         <div className="d-flex justify-content-between">
                             <p className="fc-grey fs-18">Detailed Cost Savings Calculation</p>
-                            <button type="button" className="border-none bg-white" onClick={openCalcModal}><img className="calc-img" src={calc_icon} alt="" /></button>
+                            <button type="button" className="border-none bg-white" onClick={openCalcModal}><img className="calc-img" src={calc_icon} alt="calculator" /></button>
                         </div>
                         <div className="px-1">
                             <div className="d-flex">
