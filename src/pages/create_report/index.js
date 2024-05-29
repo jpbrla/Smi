@@ -8,7 +8,7 @@ import "./style.scss"
 const fetchData = async () => {
     let data = []
     let columns = []
-    const wb = read(await (await fetch(window.location.origin + "/report.xlsx")).arrayBuffer(), { WTF: 1 });
+    const wb = read(await (await fetch(window.location.origin + "/smi_report.xlsx")).arrayBuffer(), { WTF: 1 });
 
     /* use sheet_to_json with header: 1 to generate an array of arrays */
     const sheetData = utils.sheet_to_json(wb.Sheets[wb.SheetNames[0]], { header: 1 });
@@ -128,20 +128,20 @@ const CreateReportPage = () => {
                 <p className="f-bold">Search Query:</p>
                 <div className="dash-border">
                     <div className="d-flex fs-14">
-                        <span className="f-bold">Field1:</span>
-                        <span className="ml-10">Data</span>
+                        <span className="f-bold">Example Search Field1:</span>
+                        <span className="ml-10">Data from Search</span>
                     </div>
                     <div className="d-flex fs-14">
-                        <span className="f-bold">Field2:</span>
-                        <span className="ml-10">Data</span>
+                        <span className="f-bold">Example Search Field2:</span>
+                        <span className="ml-10">Data from Search</span>
                     </div>
                     <div className="d-flex fs-14">
-                        <span className="f-bold">Field3:</span>
-                        <span className="ml-10">Data</span>
+                        <span className="f-bold">Example Search Field3:</span>
+                        <span className="ml-10">Data from Search</span>
                     </div>
                     <div className="d-flex fs-14">
-                        <span className="f-bold">Field4:</span>
-                        <span className="ml-10">Data</span>
+                        <span className="f-bold">Example Search Field4:</span>
+                        <span className="ml-10">Data from Search</span>
                     </div>
                 </div>
             </div>
@@ -164,7 +164,7 @@ const CreateReportPage = () => {
                 </div>
             </div>
             <div className="d-flex justify-content-center mt-30">
-                <button className="search-btn">REVISE SEARCH</button>
+                <button className="search-btn">Revise Search</button>
             </div>
         </div>
     )
