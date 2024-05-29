@@ -26,15 +26,19 @@ const StatusReportPage = () => {
                 </div>
                 <div className="d-flex">
                     <p className="fs-12 w-40 text-end pr-10 f-bold fc-black">Originator(s)</p>
-                    <p className="fs-12 w-60 f-regular fc-darkgrey">Sample Owner Name</p>
-                </div>
-                <div className="d-flex">
-                    <p className="fs-12 w-40 text-end pr-10 f-bold fc-black">Owner</p>
-                    <p className="fs-12 w-60 f-regular fc-darkgrey">02/02/24</p>
+                    <p className="fs-12 w-60 f-regular fc-darkgrey">Sample Originatorname</p>
                 </div>
                 <div className="d-flex">
                     <p className="fs-12 w-40 text-end pr-10 f-bold fc-black">Manual Originator(s)</p>
                     <p className="fs-12 w-60 f-regular fc-darkgrey">Firstname Lastname, Originator Nametwo</p>
+                </div>
+                <div className="d-flex">
+                    <p className="fs-12 w-40 text-end pr-10 f-bold fc-black">Owner</p>
+                    <p className="fs-12 w-60 f-regular fc-darkgrey">Sample Ownername</p>
+                </div>
+                <div className="d-flex">
+                    <p className="fs-12 w-40 text-end pr-10 f-bold fc-black">Assigned to Owner</p>
+                    <p className="fs-12 w-60 f-regular fc-darkgrey">02/02/24</p>
                 </div>
                 <div className="d-flex">
                     <p className="fs-12 w-40 text-end pr-10 f-bold fc-black">Division</p>
@@ -65,7 +69,7 @@ const StatusReportPage = () => {
                         <p className="fs-12 w-100 f-regular-italic fc-primary">1. audiofile.mp3</p>
                         <p className="fs-12 w-100 f-regular-italic fc-primary">2. videofile.mp4</p>
                         <p className="fs-12 w-100 f-regular-italic fc-primary">3. worddoc.docx</p>
-                        <p className="fs-12 w-100 f-regular-italic fc-primary">4. excel.xlsx</p>
+                        <p className="fs-12 w-100 f-regular-italic fc-primary">4. excel.xlsx</p><br></br>
                     </div>
                 </div>
                 <div className="d-flex">
