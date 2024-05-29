@@ -107,7 +107,7 @@ const SearchPage = () => {
             <p className="w-100 f-bold fs-20 fc-primary text-center mt-20 title-border py-1">Search</p>
             <form className="search-form w-100 px-10">
                 <div className="form-section mt-20">
-                    <input type="number" min={1} max={99999} className="input-control fs-18 bordered w-100 px-10 py-2" placeholder="SMI Number #" />
+                    <input type="number" min={1} max={99999} className="input-control fs-20 bordered w-100 px-10 py-2" placeholder="SMI Number #" />
                 </div>
                 <div className="form-section mt-10">
                     <label className="fs-18 fc-grey">Date Created Range</label>
