@@ -25,11 +25,11 @@ const StatusReportPage = () => {
                     <p className="fs-12 w-60 f-regular fc-darkgrey">Example title about automating the upgrading of floor panels</p>
                 </div>
                 <div className="d-flex">
-                    <p className="fs-12 w-40 text-end pr-10 f-bold fc-black">Originator(s)</p>
+                    <p className="fs-12 w-40 text-end pr-10 f-bold fc-black">Originator</p>
                     <p className="fs-12 w-60 f-regular fc-darkgrey">Sample Originatorname</p>
                 </div>
                 <div className="d-flex">
-                    <p className="fs-12 w-40 text-end pr-10 f-bold fc-black">Manual Originator(s)</p>
+                    <p className="fs-12 w-40 text-end pr-10 f-bold fc-black">Additional Originator(s)</p>
                     <p className="fs-12 w-60 f-regular fc-darkgrey">Firstname Lastname, Originator Nametwo</p>
                 </div>
                 <div className="d-flex">
@@ -69,13 +69,13 @@ const StatusReportPage = () => {
                         <p className="fs-12 w-100 f-regular-italic fc-primary">1. audiofile.mp3</p>
                         <p className="fs-12 w-100 f-regular-italic fc-primary">2. videofile.mp4</p>
                         <p className="fs-12 w-100 f-regular-italic fc-primary">3. worddoc.docx</p>
-                        <p className="fs-12 w-100 f-regular-italic fc-primary">4. excel.xlsx</p><br></br>
+                        <p className="fs-12 w-100 f-regular-italic fc-primary">4. excel.xlsx</p>
                     </div>
-                </div>
+                </div><br></br>
                 <div className="d-flex">
                     <p className="fs-12 w-40 text-end pr-10 f-bold fc-black">Annual Cost Savings</p>
                     <p className="fs-14 w-60 f-bold fc-green">$1,234.56</p>
-                </div>
+                </div><br></br>
                 <div className="d-flex">
                     <p className="fs-12 w-40 text-end pr-10 f-bold fc-black">Notifications</p>
                     <div className="w-60 d-flex flex-column">

@@ -22,43 +22,48 @@ const SearchResultPage = () => {
                                 </div>
                                 <hr/>
                                 <div className="d-flex">
-                                    <p className="fs-12 w-40 text-end pr-10 f-bold fc-black">Number</p>
+                                    <p className="fs-12 w-40 text-end pr-10 f-bold fc-black">SMI Number</p>
                                     <p className="fs-12 w-60 f-regular fc-darkgrey">11106</p>
+                                </div>
+                                <div className="d-flex">
+                                    <p className="fs-12 w-40 text-end pr-10 f-bold fc-black">Date Created</p>
+                                    <p className="fs-12 w-60 f-regular fc-darkgrey">02/01/24</p>
                                 </div>
                                 <div className="d-flex">
                                     <p className="fs-12 w-40 text-end pr-10 f-bold fc-black">Date Updated</p>
                                     <p className="fs-12 w-60 f-regular fc-darkgrey">02/02/24</p>
                                 </div>
                                 <div className="d-flex">
-                                    <p className="fs-12 w-40 text-end pr-10 f-bold fc-black">Create Date</p>
-                                    <p className="fs-12 w-60 f-regular fc-darkgrey">02/01/24</p>
-                                </div>
-                                <div className="d-flex">
                                     <p className="fs-12 w-40 text-end pr-10 f-bold fc-black">Title</p>
                                     <p className="fs-12 w-60 f-regular fc-darkgrey">Example title about automating the upgrading of floor panels</p>
                                 </div>
                                 <div className="d-flex">
-                                    <p className="fs-12 w-40 text-end pr-10 f-bold fc-black">Name</p>
-                                    <p className="fs-12 w-60 f-regular fc-darkgrey">Sample Name</p>
+                                    <p className="fs-12 w-40 text-end pr-10 f-bold fc-black">Originator</p>
+                                    <p className="fs-12 w-60 f-regular fc-darkgrey">Sample OriginatorName</p>
                                 </div>
                                 <div className="d-flex">
-                                    <p className="fs-12 w-40 text-end pr-10 f-bold fc-black">Assigned</p>
-                                    <p className="fs-12 w-60 f-regular fc-darkgrey">02/02/24</p>
-                                </div>
-                                <div className="d-flex">
-                                    <p className="fs-12 w-40 text-end pr-10 f-bold fc-black">Names</p>
+                                    <p className="fs-12 w-40 text-end pr-10 f-bold fc-black">Additional Originator(s)</p>
                                     <p className="fs-12 w-60 f-regular fc-darkgrey">Firstname Lastname, Originator Nametwo</p>
                                 </div>
                                 <div className="d-flex">
-                                    <p className="fs-12 w-40 text-end pr-10 f-bold fc-black">Abber</p>
-                                    <p className="fs-12 w-60 f-regular fc-darkgrey">ADD</p>
+                                    <p className="fs-12 w-40 text-end pr-10 f-bold fc-black">Owner</p>
+                                    <p className="fs-12 w-60 f-regular fc-darkgrey">Sample OwnerName</p>
+                                </div>
+                                <div className="d-flex">
+                                    <p className="fs-12 w-40 text-end pr-10 f-bold fc-black">Assigned to Owner</p>
+                                    <p className="fs-12 w-60 f-regular fc-darkgrey">02/02/24</p>
+                                </div>
+
+                                <div className="d-flex">
+                                    <p className="fs-12 w-40 text-end pr-10 f-bold fc-black">Division</p>
+                                    <p className="fs-12 w-60 f-regular fc-darkgrey">BLA</p>
                                 </div>
                                 <div className="d-flex">
                                     <p className="fs-12 w-40 text-end pr-10 f-bold fc-black">Department</p>
                                     <p className="fs-12 w-60 f-regular fc-darkgrey">Office Services</p>
                                 </div>
                                 <div className="d-flex">
-                                    <p className="fs-12 w-40 text-end pr-10 f-bold fc-black">Area</p>
+                                    <p className="fs-12 w-40 text-end pr-10 f-bold fc-black">Improvement Area</p>
                                     <p className="fs-12 w-60 f-regular fc-darkgrey">Automation</p>
                                 </div>
                                 <div className="d-flex">
@@ -66,7 +71,7 @@ const SearchResultPage = () => {
                                     <p className="fs-12 w-60 f-regular fc-darkgrey">Set up notice to upgrade floor panels every 7 months. Just another sentence to showcase full area of description field.</p>
                                 </div>
                                 <div className="d-flex">
-                                    <p className="fs-12 w-40 text-end pr-10 f-bold fc-black">Savings</p>
+                                    <p className="fs-12 w-40 text-end pr-10 f-bold fc-black">Cost Savings</p>
                                     <p className="fs-12 w-60 f-regular fc-darkgrey">$1456.00</p>
                                 </div>
                                 <div className="d-flex">
