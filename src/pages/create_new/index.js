@@ -110,7 +110,7 @@ const CreateNewPage = () => {
                             placeholder="Additional Originator(s),"
                             value={origins}
                             onChange={(e) => setOrigins(e.target.value)} />
-                        <span className="fs-13 position-absolute r-0 fc-grey f-regular-italic mr-5"><sup>(Use comma between names)</sup></span>
+                        <span className="fs-9 position-absolute r-0 fc-grey f-regular-italic mr-5">(Use comma between names)</span>
                     </div>
                 </div>
                 <div className="mt-2"> 
