@@ -53,6 +53,16 @@ const UserDashboardPage = () => {
                     </button>
                 </div>
             </div>
+            <div className="d-flex flex-column mt-50">
+                <div className="d-flex flex-column">
+                    <p className="w-100 text-center fs-20 fc-black">Implemented</p>
+                    <button className="d-flex justify-content-around align-items-center border-none bg-white mt-10" onClick={() => window.location.href = "/statusreport"}>
+                        <span>44444</span>
+                        <span>Older SMI that has been implemented</span>
+                        <span><ChevronRight size={15} /></span>
+                    </button>
+                </div>
+            </div>
         </div>
     )
 }
