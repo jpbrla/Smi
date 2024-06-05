@@ -7,6 +7,9 @@ const Footer = () => {
     )
 }
 
+
+<hr class="MuiDivider-root">
 <Divider />
+</hr>
 
 export default Footer
