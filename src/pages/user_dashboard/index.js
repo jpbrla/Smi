@@ -22,7 +22,7 @@ const UserDashboardPage = () => {
             </div>
             <div className="d-flex flex-column mt-50">
                 <div className="d-flex flex-column">
-                    <p className="w-100 text-center fs-20 fc-black">Submitted and in Review</p>
+                    <p className="w-100 text-center fs-20 fc-black">Submitted for Owner Assignment</p>
                     <button className="d-flex justify-content-around align-items-center border-none bg-white mt-10" onClick={() => window.location.href = "/statusreport"}>
                         <span>11106</span>
                         <span>Automating Floor Panels</span>
