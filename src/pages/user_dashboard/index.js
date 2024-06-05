@@ -18,9 +18,10 @@ const UserDashboardPage = () => {
                         <span>Example SMI title that's quite long.</span>
                         <span><ChevronRight size={15} /></span>
                     </button>
+                    <Hr></Hr>
                 </div>
             </div>
-            <Hr></Hr>
+            
             <div className="d-flex flex-column mt-50">
                 <div className="d-flex flex-column">
                     <p className="w-100 text-center fs-20 fc-black">Submitted for Owner Assignment</p>
@@ -31,7 +32,7 @@ const UserDashboardPage = () => {
                     </button>
                 </div>
             </div>
-            <Hr></Hr>
+         
             <div className="d-flex flex-column mt-50">
                 <div className="d-flex flex-column">
                     <p className="w-100 text-center fs-20 fc-black">In Progress</p>
@@ -42,7 +43,7 @@ const UserDashboardPage = () => {
                     </button>
                 </div>
             </div>
-            <Hr></Hr>
+           
             <div className="d-flex flex-column mt-50">
                 <div className="d-flex flex-column">
                     <p className="w-100 text-center fs-20 fc-black">Not Implemented</p>
