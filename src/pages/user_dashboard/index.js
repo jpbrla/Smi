@@ -18,7 +18,6 @@ const UserDashboardPage = () => {
                         <span>Example SMI title that's quite long.</span>
                         <span><ChevronRight size={15} /></span>
                     </button>
-                    <p>_____________________________________________________________</p>
                 </div>
             </div>
             
