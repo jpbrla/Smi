@@ -1,7 +1,4 @@
 import React from "react"
-import Divider from '@mui/material/Divider'
-
-<Divider />
 
 const Footer = () => {
     return (
