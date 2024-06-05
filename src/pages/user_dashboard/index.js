@@ -14,8 +14,8 @@ const UserDashboardPage = () => {
                     <p className="w-100 text-center fs-20 fc-black">Saved to Draft</p>
                     <p className="w-100 text-center fs-16 fc-grey f-regular-italic">Draft SMIs are deleted after 30 days</p>
                     <button className="d-flex justify-content-around align-items-center border-none bg-white mt-10" onClick={() => window.location.href = "/statusreport"}>
-                        <span>11106</span>
-                        <span>Automating Floor Panels</span>
+                        <span>12345</span>
+                        <span>Example SMI title that's quite long. Example SMI title that's quite long. Example SMI title that's quite long. Example SMI title that's quite long. Example SMI title that's quite long. Example SMI title that's quite long. </span>
                         <span><ChevronRight size={15} /></span>
                     </button>
                 </div>
@@ -24,8 +24,8 @@ const UserDashboardPage = () => {
                 <div className="d-flex flex-column">
                     <p className="w-100 text-center fs-20 fc-black">Submitted for Owner Assignment</p>
                     <button className="d-flex justify-content-around align-items-center border-none bg-white mt-10" onClick={() => window.location.href = "/statusreport"}>
-                        <span>11106</span>
-                        <span>Automating Floor Panels</span>
+                        <span>67890</span>
+                        <span>This is just a test name</span>
                         <span><ChevronRight size={15} /></span>
                     </button>
                 </div>
@@ -34,7 +34,7 @@ const UserDashboardPage = () => {
                 <div className="d-flex flex-column">
                     <p className="w-100 text-center fs-20 fc-black">In Progress</p>
                     <button className="d-flex justify-content-around align-items-center border-none bg-white mt-10" onClick={() => window.location.href = "/statusreport"}>
-                        <span>11106</span>
+                        <span>22331</span>
                         <span>Automating Floor Panels</span>
                         <span><ChevronRight size={15} /></span>
                     </button>
@@ -44,7 +44,7 @@ const UserDashboardPage = () => {
                 <div className="d-flex flex-column">
                     <p className="w-100 text-center fs-20 fc-black">Not Implemented</p>
                     <button className="d-flex justify-content-around align-items-center border-none bg-white mt-10" onClick={() => window.location.href = "/statusreport"}>
-                        <span>11106</span>
+                        <span className="w-100 fs-10 fc-primary f-bold text-center">>8423</span>
                         <span>Automating Floor Panels</span>
                         <span><ChevronRight size={15} /></span>
                     </button>
