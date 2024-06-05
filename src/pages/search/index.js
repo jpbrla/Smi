@@ -242,7 +242,7 @@ const SearchPage = () => {
                         placeholder="Description"
                         value={description}
                         onChange={(e) => setDescription(e.target.value)} />
-                    <span className="fs-16 position-absolute r-0 fc-grey f-regular-italic mr-5">Enter any keywords</span>
+                    <span className="fs-16 position-absolute r-0 fc-grey f-regular-italic mr-5">Enter any keywords &nbsp; &nbsp; &nbsp; &nbsp;</span>
                 </div>
                 <div className={"form-section bordered mt-1 d-flex align-items-center"}>
                     <input className="input-control px-10 py-2 text-ellipsis w-100" type="text" name="division" placeholder="Division" value={division.join(", ")} disabled />
