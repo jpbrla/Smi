@@ -197,7 +197,7 @@ const SearchPage = () => {
                         className="input-control px-10 w-100 py-2"
                         type="text"
                         name="extra_origins"
-                        placeholder="Additional Originator(s)"
+                        placeholder="Additional Originator(s),"
                         value={extra_origins}
                         onChange={(e) => setExtraOrigins(e.target.value)} />
                 </div>
