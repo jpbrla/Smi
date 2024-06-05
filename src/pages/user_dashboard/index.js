@@ -11,7 +11,7 @@ const UserDashboardPage = () => {
             </div>
             <div className="d-flex flex-column mt-20">
                 <div className="d-flex flex-column">
-                    <p className="w-100 text-center fs-20 fc-black">SMIs Saved to Draft</p>
+                    <p className="w-100 text-center fs-20 fc-black">Saved to Draft</p>
                     <p className="w-100 text-center fs-16 fc-grey f-regular-italic">Draft SMIs are deleted after 30 days</p>
                     <button className="d-flex justify-content-around align-items-center border-none bg-white mt-10" onClick={() => window.location.href = "/statusreport"}>
                         <span>11106</span>
@@ -22,7 +22,7 @@ const UserDashboardPage = () => {
             </div>
             <div className="d-flex flex-column mt-50">
                 <div className="d-flex flex-column">
-                    <p className="w-100 text-center fs-20 fc-black">SMIs Submitted</p>
+                    <p className="w-100 text-center fs-20 fc-black">Submitted and in Review</p>
                     <button className="d-flex justify-content-around align-items-center border-none bg-white mt-10" onClick={() => window.location.href = "/statusreport"}>
                         <span>11106</span>
                         <span>Automating Floor Panels</span>
@@ -32,7 +32,7 @@ const UserDashboardPage = () => {
             </div>
             <div className="d-flex flex-column mt-50">
                 <div className="d-flex flex-column">
-                    <p className="w-100 text-center fs-20 fc-black">SMIs In Progress</p>
+                    <p className="w-100 text-center fs-20 fc-black">In Progress</p>
                     <button className="d-flex justify-content-around align-items-center border-none bg-white mt-10" onClick={() => window.location.href = "/statusreport"}>
                         <span>11106</span>
                         <span>Automating Floor Panels</span>
@@ -42,7 +42,7 @@ const UserDashboardPage = () => {
             </div>
             <div className="d-flex flex-column mt-50">
                 <div className="d-flex flex-column">
-                    <p className="w-100 text-center fs-20 fc-black">SMIs Implemented</p>
+                    <p className="w-100 text-center fs-20 fc-black">Not Implemented</p>
                     <button className="d-flex justify-content-around align-items-center border-none bg-white mt-10" onClick={() => window.location.href = "/statusreport"}>
                         <span>11106</span>
                         <span>Automating Floor Panels</span>

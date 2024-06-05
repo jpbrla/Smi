@@ -113,7 +113,7 @@ const CreateNewPage = () => {
                         <span className="fs-13 position-absolute r-0 fc-grey f-regular-italic mr-5"><sup>(Use comma between names)</sup></span>
                     </div>
                 </div>
-                <div className="mt-2">
+                <div className="mt-2"> 
                     <div className={"form-section" + (owner==="" ? " border-red" : " border-green")}>
                         <input
                             className="input-control px-10 py-2"
