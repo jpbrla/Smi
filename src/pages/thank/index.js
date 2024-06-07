@@ -11,7 +11,7 @@ const ThankPage = () => {
                 <p className="w-100 text-center fs-18 mt-30 lh-sm">Please see your confirmation email or your User Dashboard to make any updates.</p>
             </div>
             <div className="d-flex justify-content-center">
-                <button className="submit-btn mt-20" onClick={() => window.location.href = "/dashboard"}>Go to User Dashboard</button>
+                <button className="submit-btn mt-20 px-30 py-2" onClick={() => window.location.href = "/dashboard"}>Go to User Dashboard</button>
             </div>
         </div>
     )

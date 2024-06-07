@@ -1,5 +1,4 @@
-import React, {useState, useEffect} from "react";
-import ReactModal from "react-modal";
+import React, {useState} from "react";
 import { Calendar, DateObject } from "react-multi-date-picker";
 import { areaList, divisionList, departmentList, smiStageList } from "resources/data";
 import calendar_range_icon from "resources/calendar-range.svg"
@@ -102,7 +101,7 @@ const SearchPage = () => {
     }
 
     return (
-        <div className="page-search d-flex flex-column align-items-center px-10">
+        <div className={"page-search d-flex flex-column align-items-center px-10" + (isAreaDropdownOpen || isDivisionDropdownOpen || isStageDropdownOpen ? " h-105" : "")}>
             <p className="w-100 fs-20 fc-primary f-bold text-center">Suggested Methods Improvement (SMI)</p>
             <p className="w-100 f-bold fs-20 fc-primary text-center mt-20 title-border py-1">Search</p>
             <form className="search-form w-100 px-10">
@@ -224,12 +223,13 @@ const SearchPage = () => {
                                             {
                                                 setImproveArea(value)
                                             }} />
+                                            <span className="checkmark-radio"></span>
                                         </label>
                                     </li>)
                                 })
                             }
                         </ul>
-                        <div className="d-flex flex-column align-items-center">
+                        <div className="d-flex flex-column align-items-center py-3">
                             <button type="button" className={"py-2 fs-20 fc-white w-50" + (improve_area === "" ? " bg-grey" : " bg-primary")} onClick={() => setAreaDropdownOpen(false)}>DONE</button>
                         </div>
                     </div>
@@ -272,7 +272,7 @@ const SearchPage = () => {
                                 })
                             }
                         </ul>
-                        <div className="d-flex flex-column align-items-center">
+                        <div className="d-flex flex-column align-items-center py-3">
                             <button type="button" className={"py-2 fs-20 fc-white w-50" + (division.length === 0 ? " bg-grey" : " bg-primary")} onClick={() => setDivisionDropdownOpen(false)}>DONE</button>
                         </div>
                     </div>
@@ -305,7 +305,7 @@ const SearchPage = () => {
                                 })
                             }
                         </ul>
-                        <div className="d-flex flex-column align-items-center">
+                        <div className="d-flex flex-column align-items-center py-3">
                             <button type="button" className={"py-2 fs-20 fc-white w-50" + (stage === "" ? " bg-grey" : " bg-primary")} onClick={() => setStageDropdownOpen(false)}>DONE</button>
                         </div>
                     </div>
@@ -315,7 +315,7 @@ const SearchPage = () => {
                     <button type="button" className="submit-btn bg-grey" onClick={clearSearchForm}>Clear Search Fields</button>
                 </div>
             </form>
-            <div className={"dropdown-content position-fixed scrollable w-auto h-100vh top-0" + (department.length === 0 ? " border-red" : " border-green") + (isDepartDropdownOpen ? " expand" : "")}>
+            <div className={"dropdown-content position-fixed scrollable w-auto h-90vh top-0 mt-5vh" + (department.length === 0 ? " border-red" : " border-green") + (isDepartDropdownOpen ? " expand" : "")}>
                 <div className="d-flex justify-content-around py-1">
                     <p className="fs-18 fc-grey f-regular-italic">Choose the Departments to add to this report</p>
                 </div> 

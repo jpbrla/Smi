@@ -3,4 +3,58 @@
 .page-status {
     width: 100%;
     height: auto;
+
+    & .menus {
+        width: 100%;
+        padding: 10px;
+        background-color: $c-white;
+        list-style: none;
+        margin: 0;
+
+        & > li {
+            color: $c-black;
+        }
+        & > li:hover {
+            background-color: rgba($color: $c-primary, $alpha: 0.12);
+        }
+    }
+
+    & .editor-action-btn {
+        background-color: transparent;
+        border: none;
+    }
+
+    & .update-btn {
+        width: 30%;
+        padding: 10px;
+        color: $c-primary;
+        border: 1px solid $c-primary;
+        background-color: $c-white;
+        font-size: 20px;
+        transition: .3s;
+
+        &:hover {
+            background-color: $c-primary;
+            color: $c-white;
+        }
+        &:active {
+            background-color: rgba($color: $c-primary, $alpha: 0.8);
+        }
+    }
+
+    textarea {
+        width: 100%;
+        padding: 0px 5px;
+        border: none;
+        outline: none;
+        line-height: 1.5rem;
+        resize: none;
+        background:
+            repeating-linear-gradient(to right , transparent 0 5px, white 0 8px),
+            repeating-linear-gradient(to bottom, transparent 0 calc(1.5em - 2px), $c-lightgrey 0 1.5em) transparent;
+
+        &::placeholder {
+            color: $c-grey;
+        }
+    }
 }

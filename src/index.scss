@@ -18,6 +18,9 @@ p {
 .fc-red {
   color: $c-red;
 }
+.fc-orange {
+  color: $c-orange;
+}
 .fc-lightgrey {
   color: $c-lightgrey;
 }
@@ -195,8 +198,22 @@ p {
   width: 60% !important;
 }
 
-.h-100vh {
-  height: 100vh !important;
+.h-90vh {
+  height: 90vh !important;
+}
+
+.h-105 {
+  height: 120% !important;
+}
+
+.mt-5vh {
+  margin-top: 5vh !important;
+}
+
+.return-icon {
+  width: 25px;
+  height: 25px;
+  margin-right: 10px;
 }
 
 .centeredX {
@@ -312,4 +329,9 @@ p {
   height: 8px;
   border-radius: 50%;
   background-color: $c-white;
+}
+
+.checkbox-item:has(input:checked) {
+  background-color: rgba($color: $c-primary, $alpha: 0.5);
+  color: $c-white;
 }

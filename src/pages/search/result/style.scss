@@ -21,7 +21,7 @@
     .itemBtnExpanded {
         background-color: rgba($color: $c-primary, $alpha: 0.2);
         border: 2px solid $c-darkgrey;
-        border-radius: 6px;
+        border-radius: 5px;
     }
 
     .itemBtnExpanded .bi-chevron-right {
@@ -67,7 +67,7 @@
         button {
             width: 50%;
             background-color: $c-primary;
-            border-radius: 10px;
+            border-radius: 5px;
             font-size: 14px;
             border: none;
             outline: none;
@@ -82,11 +82,11 @@
     }
 
     .search-btn {
-        width: 50%;
+        width: 40%;
         border: none;
-        border-radius: 10px;
+        border-radius: 5px;
         background-color: $c-darkgrey;
         color: $c-white;
-        padding: 5px;
+        padding: 10px;
     }
 }

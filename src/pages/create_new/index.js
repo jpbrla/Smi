@@ -89,7 +89,27 @@ const CreateNewPage = () => {
         <div className="page-new px-10">
             <p className="w-100 fs-20 fc-primary f-bold text-center">Suggested Methods Improvement (SMI)</p>
             <p className="f-bold fs-20 fc-primary text-center mt-20 title-border py-1">Create New</p>
+            <div className="d-flex justify-content-center w-100 p-1 mt-1">
+                <div className="d-flex flex-column align-items-start dash-border w-auto py-1 px-3">
+                    <p className="f-regular-italic fc-grey">Required fields are outlined in <span className="fc-red">RED</span></p>
+                    <p className="f-regular-italic fc-grey">Completed fields are outlined in <span className="fc-green">GREEN</span></p>
+                    <p className="f-regular-italic fc-grey">Suggested fields are outlined in <span className="fc-black">BLACK</span></p>
+                </div>
+            </div>
+            <hr className="bordered-1 border-black mt-1"/>
             <form className="main-form mt-20">
+                <div className="d-flex align-items-center mt-2 px-10">
+                    <p className="w-40 fs-20 fc-grey">Originator</p>
+                    <p className="w-60 fs-20 fc-black">Bon Rickles</p>
+                </div>
+                <div className="d-flex align-items-center mt-2 px-10">
+                    <p className="w-40 fs-20 fc-grey">Division</p>
+                    <p className="w-60 fs-20 fc-black">BLA</p>
+                </div>
+                <div className="d-flex align-items-center mt-2 px-10">
+                    <p className="w-40 fs-20 fc-grey">Department</p>
+                    <p className="w-60 fs-20 fc-black">Office Services</p>
+                </div>
                 <div className="mt-2">
                     <div className={"form-section" + (smi_title==="" ? " border-red" : " border-green")}>
                         <input 
@@ -141,6 +161,7 @@ const CreateNewPage = () => {
                                                     setArea(value)
                                                     setDropdownOpen(false)
                                                 }} />
+                                                <span className="checkmark-radio"></span>
                                             </label>
                                         </li>)
                                     })

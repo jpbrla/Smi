@@ -2,13 +2,14 @@ import React, {useEffect, useState} from "react"
 import DataTable from "react-data-table-component"
 import { saveAs } from "file-saver"
 import { utils, write, read } from "xlsx"
+import ArrowReturn from "resources/arrow-return.png"
 
 import "./style.scss"
 
 const fetchData = async () => {
     let data = []
     let columns = []
-    const wb = read(await (await fetch(window.location.origin + "/smi_report.xlsx")).arrayBuffer(), { WTF: 1 });
+    const wb = read(await (await fetch(window.location.origin + "/report.xlsx")).arrayBuffer(), { WTF: 1 });
 
     /* use sheet_to_json with header: 1 to generate an array of arrays */
     const sheetData = utils.sheet_to_json(wb.Sheets[wb.SheetNames[0]], { header: 1 });
@@ -18,7 +19,10 @@ const fetchData = async () => {
             {
                 name: cols[i].name,
                 selector: row => row[cols[i].key],
-                grow: cols[i].key === "Description" ? 2 : 0
+                grow: cols[i].key === "Description" ? 2 : 0,
+                style: {
+                    color: i === 0 ? "#00aaff" : "black"
+                }
             }
         )
     }
@@ -103,7 +107,7 @@ const CreateReportPage = () => {
     const customStyles = {
         headCells: {
             style: {
-                fontSize: 15,
+                fontSize: 14,
                 fontWeight: 'bold'
             },
         },
@@ -124,24 +128,24 @@ const CreateReportPage = () => {
         <div className="page-report px-10">
             <p className="w-100 fs-20 fc-primary f-bold text-center">Suggested Methods Improvement (SMI)</p>
             <p className="f-bold fs-20 fc-primary text-center mt-20 title-border py-1">Report</p>
-            <div className="d-flex flex-column">
+            <div className="d-flex flex-column align-items-start">
                 <p className="f-bold">Search Query:</p>
-                <div className="dash-border">
+                <div className="dash-border w-auto">
                     <div className="d-flex fs-14">
-                        <span className="f-bold">Example Search Field1:</span>
-                        <span className="ml-10">Data from Search</span>
+                        <span className="f-bold">Division:</span>
+                        <span className="ml-10">BLA</span>
                     </div>
                     <div className="d-flex fs-14">
-                        <span className="f-bold">Example Search Field2:</span>
-                        <span className="ml-10">Data from Search</span>
+                        <span className="f-bold">Improvement Area:</span>
+                        <span className="ml-10">Automation</span>
                     </div>
                     <div className="d-flex fs-14">
-                        <span className="f-bold">Example Search Field3:</span>
-                        <span className="ml-10">Data from Search</span>
+                        <span className="f-bold">Originator:</span>
+                        <span className="ml-10">Bob Rickles</span>
                     </div>
                     <div className="d-flex fs-14">
-                        <span className="f-bold">Example Search Field4:</span>
-                        <span className="ml-10">Data from Search</span>
+                        <span className="f-bold">Additional Originators:</span>
+                        <span className="ml-10">Agent 07042</span>
                     </div>
                 </div>
             </div>
@@ -164,7 +168,7 @@ const CreateReportPage = () => {
                 </div>
             </div>
             <div className="d-flex justify-content-center mt-30">
-                <button className="search-btn">Revise Search</button>
+                <button className="search-btn d-flex justify-content-center align-items-center"><img src={ArrowReturn} alt="" className="return-icon" />REVISE SEARCH</button>
             </div>
         </div>
     )

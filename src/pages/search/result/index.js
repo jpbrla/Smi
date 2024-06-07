@@ -2,6 +2,7 @@ import React from "react"
 import AccordionItem from "components/Accordion/item"
 import { Accordion } from "@szhsin/react-accordion"
 import { ArrowReturnRight } from "react-bootstrap-icons"
+import ArrowReturnLeft from "resources/arrow-return.png"
 import "./style.scss"
 
 const SearchResultPage = () => {
@@ -88,7 +89,7 @@ const SearchResultPage = () => {
             }
             </Accordion>
             <div className="d-flex justify-content-center mt-40">
-                <button type="button" className="search-btn">REVISE SEARCH</button>
+                <button className="search-btn d-flex justify-content-center align-items-center"><img src={ArrowReturnLeft} alt="" className="return-icon" />REVISE SEARCH</button>
             </div>
         </div>
     )
