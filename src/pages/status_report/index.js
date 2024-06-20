@@ -165,7 +165,7 @@ const StatusReportPage = () => {
                 <div className="d-flex justify-content-center align-items-center w-100">
                     <button type="button" className="update-btn">Update</button>
                 </div>
-                <hr className="bordered-2 border-black w-100 mt-4" />
+                <hr className="bordered-2 border-black w-75 mt-4" />
             </div>
             <div className="w-100 d-flex justify-content-center mt-30">
                 <p className="w-50 py-10 bg-lightgrey text-center fs-20">SMI Action History</p>
