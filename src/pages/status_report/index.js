@@ -112,7 +112,7 @@ const StatusReportPage = () => {
             <div className={"d-flex flex-column align-items-center"}>
                 <div className="d-flex flex-column w-75 bordered-1 border-grey mt-20">
                     <div className="d-flex justify-content-around bg-lightgrey py-3 w-100"></div>
-                    <ul className="menus w-100">
+                    <ul className="menus w-100 fs-14">
                         {
                             smiStageList.map((value, i) => {
                                 return (<li key={i}>
@@ -131,16 +131,16 @@ const StatusReportPage = () => {
                         <div className="d-flex flex-column align-items-center w-50">
                             <p className="fs-16">Text Options</p>
                             <div className="">
-                                <button type="button" className={"editor-action-btn" + (isTypeBold ? " bg-prim fc-white" : "")} onClick={() => setTypeBold(!isTypeBold)}><TypeBold size={15} /></button>
-                                <button type="button" className={"editor-action-btn" + (isTypeItalic ? " bg-prim fc-white" : "")} onClick={() => setTypeItalic(!isTypeItalic)}><TypeItalic size={15} /></button>
-                                <button type="button" className={"editor-action-btn" + (isTypeUnderline ? " bg-prim fc-white" : "")} onClick={() => setTypeUnderline(!isTypeUnderline)}><TypeUnderline size={15} /></button>
+                                <button type="button" className={"editor-action-btn" + (isTypeBold ? " bg-prim fc-white" : "")} onClick={() => setTypeBold(!isTypeBold)}><TypeBold size={25} /></button>
+                                <button type="button" className={"editor-action-btn" + (isTypeItalic ? " bg-prim fc-white" : "")} onClick={() => setTypeItalic(!isTypeItalic)}><TypeItalic size={25} /></button>
+                                <button type="button" className={"editor-action-btn" + (isTypeUnderline ? " bg-prim fc-white" : "")} onClick={() => setTypeUnderline(!isTypeUnderline)}><TypeUnderline size={25} /></button>
                             </div>
                         </div>
                         <div className="d-flex flex-column align-items-center w-50">
                             <p className="fs-16">Paragraph Options</p>
                             <div className="">
-                                <button type="button" className={"editor-action-btn" + (isListUl ? " bg-prim fc-white" : "")} onClick={() => setListUl(!isListUl)}><ListUl size={15} /></button>
-                                <button type="button" className={"editor-action-btn" + (isListOl ? " bg-prim fc-white" : "")} onClick={() => setListOl(!isListOl)}><ListOl size={15} /></button>
+                                <button type="button" className={"editor-action-btn" + (isListUl ? " bg-prim fc-white" : "")} onClick={() => setListUl(!isListUl)}><ListUl size={25} /></button>
+                                <button type="button" className={"editor-action-btn" + (isListOl ? " bg-prim fc-white" : "")} onClick={() => setListOl(!isListOl)}><ListOl size={25} /></button>
                             </div>
                         </div>
                     </div>
