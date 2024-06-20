@@ -1,3 +1,8 @@
+@font-face {
+  font-family: 'lato'; /*a name to be used later*/
+  src: url('https://fonts.googleapis.com/css?family=Lato'); /*URL to font*/
+}
+
 /***************************************/
 /***************************************/
 /* FONT SIZES */
