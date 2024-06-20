@@ -168,7 +168,7 @@ const CreateReportPage = () => {
                 </div>
             </div>
             <div className="d-flex justify-content-center mt-30">
-               <a href="../search"> <button className="search-btn d-flex justify-content-center align-items-center"><img src={ArrowReturn} alt="" className="return-icon" />REVISE SEARCH</button> </a>
+               <button className="search-btn d-flex justify-content-center align-items-center"><a href="../search"> <img src={ArrowReturn} alt="" className="return-icon" />REVISE SEARCH</button> </a>
             </div>
         </div>
     )
