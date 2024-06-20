@@ -109,16 +109,16 @@ const StatusReportPage = () => {
             <div className="w-100 d-flex justify-content-center mt-30">
                 <p className="w-50 py-10 bg-lightgrey text-center fs-20">Change SMI Status</p>
             </div>
-            <div className={"d-flex flex-column align-items-center"}>
-                <div className="d-flex flex-column w-75 bordered-1 border-grey mt-20">
+            <div className={"d-flex flex-column align-items-center fs-10"}>
+                <div className="d-flex flex-column w-75 bordered-1 border-grey mt-20 fs-10">
                     <div className="d-flex justify-content-around bg-lightgrey py-3 w-100"></div>
-                    <ul className="menus w-100 fs-10">
+                    <ul className="menus w-100">
                         {
                             smiStageList.map((value, i) => {
                                 return (<li key={i}>
-                                    <label className="checkbox-item">{value}
+                                    <label className="checkbox-item fs-10">{value}
                                         <input type="radio" name="radio" onChange={() => setStage(value)} />
-                                        <span className="checkmark-radio fs-10"></span>
+                                        <span className="checkmark-radio"></span>
                                     </label>
                                 </li>)
                             })
