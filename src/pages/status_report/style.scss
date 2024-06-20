@@ -10,10 +10,11 @@
         background-color: $c-white;
         list-style: none;
         margin: 0;
-        font-size: 14px;
+        
 
         & > li {
             color: $c-black;
+            font-size: 10px;
         }
         & > li:hover {
             background-color: rgba($color: $c-primary, $alpha: 0.12);
