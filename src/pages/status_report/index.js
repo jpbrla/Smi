@@ -107,10 +107,10 @@ const StatusReportPage = () => {
                 </div>
             </div>
             <div className="w-100 d-flex justify-content-center mt-30">
-                <p className="w-50 bg-lightgrey text-center fs-20">Change SMI Status</p>
+                <p className="w-50 py-10 bg-lightgrey text-center fs-20">Change SMI Status</p>
             </div>
             <div className={"d-flex flex-column align-items-center"}>
-                <div className="d-flex flex-column w-75 bordered-1 border-grey mt-5">
+                <div className="d-flex flex-column w-75 bordered-1 border-grey mt-20">
                     <div className="d-flex justify-content-around bg-lightgrey py-3 w-100"></div>
                     <ul className="menus w-100">
                         {
@@ -129,7 +129,7 @@ const StatusReportPage = () => {
                 <div className={"w-75" + (stageUpdateNote==="" ? " border-red" : " border-green")}>
                 <p className="w-50 py-10 bg-lightgrey text-center fs-20 mt-20">Status Update Notes</p>
                     <div className="d-flex bg-lightgrey">
-                        <div className="d-flex flex-column align-items-center w-50 mt-5">
+                        <div className="d-flex flex-column align-items-center w-50">
                             <p className="fs-16">Text Options</p>
                             <div className="">
                                 <button type="button" className={"editor-action-btn" + (isTypeBold ? " bg-prim fc-white" : "")} onClick={() => setTypeBold(!isTypeBold)}><TypeBold size={25} /></button>
