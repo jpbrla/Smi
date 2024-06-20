@@ -20,12 +20,12 @@ const StatusReportPage = () => {
             </div>
             <div className="d-flex flex-column mt-20">
                 <div className="d-flex">
-                    <p className="fs-14 w-40 text-end pr-10 f-bold fc-black">SMI Number</p>
-                    <p className="fs-14 w-60 f-regular fc-darkgrey">11106</p>
+                    <p className="fs-18 w-40 text-end pr-10 f-bold fc-black">SMI Number</p>
+                    <p className="fs-18 w-60 f-regular fc-darkgrey">11106</p>
                 </div>
                 <div className="d-flex">
-                    <p className="fs-14 w-40 text-end pr-10 f-bold fc-black">Date Created</p>
-                    <p className="fs-14 w-60 f-regular fc-darkgrey">02/01/24</p>
+                    <p className="fs-18 w-40 text-end pr-10 f-bold fc-black">Date Created</p>
+                    <p className="fs-18 w-60 f-regular fc-darkgrey">02/01/24</p>
                 </div>
                 <div className="d-flex">
                     <p className="fs-14 w-40 text-end pr-10 f-bold fc-black">Date Updated</p>
@@ -126,7 +126,7 @@ const StatusReportPage = () => {
                     </ul>
                 </div>
                 <p className="w-50 py-10 bg-lightgrey text-center fs-20 mt-20">Status Update Notes</p>
-                <div className={"w-75" + (stageUpdateNote==="" ? " border-red" : " border-green")}>
+                <div className={"w-100" + (stageUpdateNote==="" ? " border-red" : " border-green")}>
                     <div className="d-flex bg-lightgrey">
                         <div className="d-flex flex-column align-items-center w-50">
                             <p className="fs-16">Text Options</p>
