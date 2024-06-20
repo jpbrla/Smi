@@ -109,8 +109,8 @@ const StatusReportPage = () => {
             <div className="w-100 d-flex justify-content-center mt-30">
                 <p className="w-50 py-10 bg-lightgrey text-center fs-20">Change SMI Status</p>
             </div>
-            <div className={"d-flex flex-column align-items-center fs-10"}>
-                <div className="d-flex flex-column w-75 bordered-1 border-grey mt-20 fs-10">
+            <div className={"d-flex flex-column align-items-center"}>
+                <div className="d-flex flex-column w-75 bordered-1 border-grey mt-20">
                     <div className="d-flex justify-content-around bg-lightgrey py-3 w-100"></div>
                     <ul className="menus w-100">
                         {
