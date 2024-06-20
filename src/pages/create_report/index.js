@@ -3,6 +3,7 @@ import DataTable from "react-data-table-component"
 import { saveAs } from "file-saver"
 import { utils, write, read } from "xlsx"
 import ArrowReturn from "resources/arrow-return.png"
+import { Link } from 'react-router-dom';
 
 import "./style.scss"
 
@@ -168,7 +169,7 @@ const CreateReportPage = () => {
                 </div>
             </div>
             <div className="d-flex justify-content-center mt-30">
-               <button className="search-btn d-flex justify-content-center align-items-center"><a href="../search"> <img src={ArrowReturn} alt="" className="return-icon" />REVISE SEARCH</button> </a>
+            <Link to="/search"> <button className="search-btn d-flex justify-content-center align-items-center"><img src={ArrowReturn} alt="" className="return-icon" />REVISE SEARCH</button></Link>
             </div>
         </div>
     )
