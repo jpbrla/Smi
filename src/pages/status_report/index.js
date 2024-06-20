@@ -116,7 +116,7 @@ const StatusReportPage = () => {
                         {
                             smiStageList.map((value, i) => {
                                 return (<li key={i}>
-                                    <label className="checkbox-item fs-10">{value}
+                                    <label className="checkbox-item">{value}
                                         <input type="radio" name="radio" onChange={() => setStage(value)} />
                                         <span className="checkmark-radio"></span>
                                     </label>
@@ -125,7 +125,7 @@ const StatusReportPage = () => {
                         }
                     </ul>
                 </div>
-                <p className="w-50 py-10 bg-lightgrey text-center fs-20 mt-20">Status Update Notes</p>
+                <p className="w-50 py-10 bg-lightgrey text-center fs-20 mt-20">Status Update Notes<Br></Br></p>
                 <div className={"w-100" + (stageUpdateNote==="" ? " border-red" : " border-green")}>
                     <div className="d-flex bg-lightgrey">
                         <div className="d-flex flex-column align-items-center w-50">
