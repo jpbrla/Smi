@@ -126,7 +126,7 @@ const StatusReportPage = () => {
                     </ul>
                 </div>
                 
-                <div className={"w-100" + (stageUpdateNote==="" ? " border-red" : " border-green")}>
+                <div className={"w-75" + (stageUpdateNote==="" ? " border-red" : " border-green")}>
                 <p className="w-50 py-10 bg-lightgrey text-center fs-20 mt-20">Status Update Notes</p>
                     <div className="d-flex bg-lightgrey">
                         <div className="d-flex flex-column align-items-center w-50">
