@@ -1,9 +1,11 @@
-import React, {useState} from "react";
-import { smiStageList } from "resources/data";
+import React, {useState, useEffect} from "react";
+import { useLocation } from "react-router-dom"
+import { smiStageList } from "resources/data"
 import { TypeBold, TypeItalic, TypeUnderline, ListOl, ListUl } from "react-bootstrap-icons"
 import "./style.scss"
 
 const StatusReportPage = () => {
+    const {state} = useLocation()
     // const [isStageDropdownOpen, setStageDropdownOpen] = useState(false)
     const [stage, setStage] = useState('')
     const [stageUpdateNote, setStageUpdateNote] = useState('')
@@ -12,6 +14,24 @@ const StatusReportPage = () => {
     const [isTypeUnderline, setTypeUnderline] = useState(false)
     const [isListOl, setListOl] = useState(false)
     const [isListUl, setListUl] = useState(false)
+
+    const numberFormatter = new Intl.NumberFormat('en-US', {
+        style: 'currency',
+        currency: 'USD'
+    });
+
+    const formatDate = (value) => {
+        let date = new Date(value);
+        const day = date.toLocaleString('default', { day: '2-digit' });
+        const month = date.toLocaleString('default', { month: '2-digit' });
+        const year = date.toLocaleString('default', { year: '2-digit' });
+        return month + '/' + day + '/' + year;
+    }
+
+    useEffect(() => {
+        window.history.replaceState({},'')
+    }, [state])
+
     return (
         <div className="page-status px-10">
             <p className="w-100 fs-20 fc-primary f-bold text-center">Suggested Methods Improvement (SMI)</p>
@@ -21,71 +41,75 @@ const StatusReportPage = () => {
             <div className="d-flex flex-column mt-20">
                 <div className="d-flex">
                     <p className="fs-14 w-40 text-end pr-10 f-bold fc-black">SMI Number</p>
-                    <p className="fs-14 w-60 f-regular fc-darkgrey">11106</p>
+                    <p className="fs-14 w-60 f-regular fc-darkgrey">{state.req_no}</p>
                 </div>
                 <div className="d-flex">
                     <p className="fs-14 w-40 text-end pr-10 f-bold fc-black">Date Created</p>
-                    <p className="fs-14 w-60 f-regular fc-darkgrey">02/01/24</p>
+                    <p className="fs-14 w-60 f-regular fc-darkgrey">{formatDate(state.created_date)}</p>
                 </div>
                 <div className="d-flex">
                     <p className="fs-14 w-40 text-end pr-10 f-bold fc-black">Date Updated</p>
-                    <p className="fs-14 w-60 f-regular fc-darkgrey">02/02/24</p>
+                    <p className="fs-14 w-60 f-regular fc-darkgrey"></p>
                 </div>
                 <div className="d-flex">
                     <p className="fs-14 w-40 text-end pr-10 f-bold fc-black">SMI Title</p>
-                    <p className="fs-14 w-60 f-regular fc-darkgrey">Example title about automating the upgrading of floor panels</p>
+                    <p className="fs-14 w-60 f-regular fc-darkgrey">{state.title}</p>
                 </div>
                 <div className="d-flex">
                     <p className="fs-14 w-40 text-end pr-10 f-bold fc-black">Originator</p>
-                    <p className="fs-14 w-60 f-regular fc-darkgrey">Sample Originatorname</p>
+                    <p className="fs-14 w-60 f-regular fc-darkgrey">{state.originator}</p>
                 </div>
                 <div className="d-flex">
                     <p className="fs-14 w-40 text-end pr-10 f-bold fc-black">Additional Originator(s)</p>
-                    <p className="fs-14 w-60 f-regular fc-darkgrey">Firstname Lastname, Originator Nametwo</p>
+                    <p className="fs-14 w-60 f-regular fc-darkgrey">{state.additional_originators}</p>
                 </div>
                 <div className="d-flex">
                     <p className="fs-14 w-40 text-end pr-10 f-bold fc-black">Owner</p>
-                    <p className="fs-14 w-60 f-regular fc-darkgrey">Sample Ownername</p>
+                    <p className="fs-14 w-60 f-regular fc-darkgrey">{state.owner}</p>
                 </div>
                 <div className="d-flex">
                     <p className="fs-14 w-40 text-end pr-10 f-bold fc-black">Assigned to Owner</p>
-                    <p className="fs-14 w-60 f-regular fc-darkgrey">02/02/24</p>
+                    <p className="fs-14 w-60 f-regular fc-darkgrey"></p>
                 </div>
                 <div className="d-flex">
                     <p className="fs-14 w-40 text-end pr-10 f-bold fc-black">Division</p>
-                    <p className="fs-14 w-60 f-regular fc-darkgrey">BLA</p>
+                    <p className="fs-14 w-60 f-regular fc-darkgrey">{state.division}</p>
                 </div>
                 <div className="d-flex">
                     <p className="fs-14 w-40 text-end pr-10 f-bold fc-black">Department</p>
-                    <p className="fs-14 w-60 f-regular fc-darkgrey">Office Services</p>
+                    <p className="fs-14 w-60 f-regular fc-darkgrey">{state.department}</p>
                 </div>
                 <div className="d-flex">
                     <p className="fs-14 w-40 text-end pr-10 f-bold fc-black">Improvement Area</p>
-                    <p className="fs-14 w-60 f-regular fc-darkgrey">Automation</p>
+                    <p className="fs-14 w-60 f-regular fc-darkgrey">{state.improvement_area}</p>
                 </div>
                 <div className="d-flex">
                     <p className="fs-14 w-40 text-end pr-10 f-bold fc-black">Description</p>
-                    <p className="fs-14 w-60 f-regular fc-darkgrey">Set up notice to upgrade floor panels every 7 months. Just another sentence to showcase full area of description field.</p>
+                    <p className="fs-14 w-60 f-regular fc-darkgrey">{state.description}</p>
                 </div><br></br>
                 <div className="d-flex">
                     <p className="fs-14 w-40 text-end pr-10 f-bold fc-black">Images</p>
                     <div className="w-60 d-flex flex-column">
-                        <p className="fs-14 w-100 f-regular-italic fc-primary">1. image001.png</p>
-                        <p className="fs-14 w-100 f-regular-italic fc-primary">2. image002.png</p>
+                        {
+                            state.attachments.images.map((imgData, i) => {
+                                return <p key={i} className="fs-14 w-100 f-regular-italic fc-primary">{i+1}. {imgData.name}</p>
+                            })
+                        }
                     </div>
                 </div><br></br>
                 <div className="d-flex">
                     <p className="fs-14 w-40 text-end pr-10 f-bold fc-black">Additional Documents</p>
                     <div className="w-60 d-flex flex-column">
-                        <p className="fs-14 w-100 f-regular-italic fc-primary">1. audiofile.mp3</p>
-                        <p className="fs-14 w-100 f-regular-italic fc-primary">2. videofile.mp4</p>
-                        <p className="fs-14 w-100 f-regular-italic fc-primary">3. worddoc.docx</p>
-                        <p className="fs-14 w-100 f-regular-italic fc-primary">4. excel.xlsx</p>
+                        {
+                            state.attachments.docs.map((docData, i) => {
+                                return <p key={i} className="fs-14 w-100 f-regular-italic fc-primary">{i+1}. {docData.name}</p>
+                            })
+                        }
                     </div>
                 </div><br></br>
                 <div className="d-flex">
                     <p className="fs-14 w-40 text-end pr-10 f-bold fc-black">Annual Cost Savings</p>
-                    <p className="fs-14 w-60 f-bold fc-green">$1,234.56</p>
+                    <p className="fs-14 w-60 f-bold fc-green">{numberFormatter.format(parseFloat(state.cost_saving_amnt))}</p>
                 </div><br></br>
                 <div className="d-flex">
                     <p className="fs-14 w-40 text-end pr-10 f-bold fc-black">Notifications</p>
@@ -111,7 +135,6 @@ const StatusReportPage = () => {
             </div>
             <div className={"d-flex flex-column align-items-center"}>
                 <div className="d-flex flex-column w-75 bordered-1 border-grey mt-20">
-                    <div className="d-flex justify-content-around bg-lightgrey py-3 w-100"></div>
                     <ul className="menus w-100">
                         {
                             smiStageList.map((value, i) => {
@@ -126,7 +149,7 @@ const StatusReportPage = () => {
                     </ul>
                 </div>
                 <p className="w-50 py-10 bg-lightgrey text-center fs-20 mt-20">Status Update Notes</p>
-                <div className={"w-75" + (stageUpdateNote==="" ? " border-red" : " border-green")}>
+                <div className={"w-75 mt-20" + (stageUpdateNote==="" ? " border-red" : " border-green")}>
                     <div className="d-flex bg-lightgrey">
                         <div className="d-flex flex-column align-items-center w-50">
                             <p className="fs-16">Text Options</p>
@@ -151,7 +174,7 @@ const StatusReportPage = () => {
                             (isTypeItalic ? " text-style-italic" : "") +
                             (isTypeUnderline ? " text-style-underline" : "")
                         }
-                        rows={6}
+                        rows={10}
                         value={stageUpdateNote}
                         onChange={(e) => setStageUpdateNote(e.target.value)}></textarea>
                     <p className="w-100 d-flex justify-content-end pr-10 fc-grey fs-12">

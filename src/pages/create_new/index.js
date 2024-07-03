@@ -1,21 +1,30 @@
 import React, {useState, useEffect, useRef} from "react"
+import { useNavigate } from "react-router-dom"
 import ReactModal from "react-modal"
+import ReactLoading from 'react-loading'
+import axios from "axios"
+import { useAlert, types } from "react-alert"
 import Calculator from "components/Calculator"
 import { TypeBold, TypeItalic, TypeUnderline, ListOl, ListUl } from "react-bootstrap-icons"
-import { areaList } from "../../resources/data"
 import "./style.scss"
 
 import calc_icon from "resources/calc.png"
 
 const CreateNewPage = () => {
+    const navigate = useNavigate()
+    const alert = useAlert()
 
     const inputImageFileRef = useRef(null)
     const inputDocumentFileRef = useRef(null)
 
     const [isDropdownOpen, setDropdownOpen] = useState(false)
     const [smi_title, setSmiTitle] = useState('')
+    const [origin, setOrigin] = useState('')
+    const [division, setDivision] = useState('')
+    const [department, setDepartment] = useState('')
     const [origins, setOrigins] = useState('')
     const [owner, setOwner] = useState('')
+    const [areaList, setAreaList] = useState([])
     const [area, setArea] = useState('')
     const [cost_description, setCostDescription] = useState('')
     const [description, setDescription] = useState('')
@@ -35,6 +44,22 @@ const CreateNewPage = () => {
     const [calcResult, setCalcResult] = useState('')
     const [tempCalcResult, setTempCalcResult] = useState('')
 
+    const [isLoadingActive, setLoadingActive] = useState(false)
+
+    useEffect(() => {
+        axios
+        .get("/new")
+        .then((res) => {
+            setOrigin(res.data.originator)
+            setDivision(res.data.division)
+            setDepartment(res.data.department)
+            setAreaList(res.data.areas)
+        })
+        .catch((error) => {
+            alert.show(error, {type: types.ERROR})
+        });
+    }, [alert])
+
     useEffect(() => {
         if (smi_title!=="" && owner!=="" && area!=="" && cost_description!=="" && description!=="") {
             setSubmitAvailable(true)
@@ -43,20 +68,58 @@ const CreateNewPage = () => {
         }
     }, [smi_title, origins, owner, area, cost_description, description])
 
-    const pickImageFile = (e) => {
-        let files = []
-        for (let i = 0; i < e.target.files.length; i++) {
-            files.push(e.target.files[i])
-        }
-        setImageFileList(files)
+    const readFileDataAsBase64 = (file) => {
+        return new Promise((resolve, reject) => {
+            const reader = new FileReader();
+    
+            reader.onload = (event) => {
+                resolve(event.target.result);
+            };
+    
+            reader.onerror = (err) => {
+                reject(err);
+            };
+    
+            reader.readAsDataURL(file);
+        });
     }
 
-    const pickDocumentFile = (e) => {
+    const pickImageFile = async (e) => {
         let files = []
         for (let i = 0; i < e.target.files.length; i++) {
-            files.push(e.target.files[i])
+            let file = e.target.files[i]
+            await readFileDataAsBase64(file)
+                .then((res) => {
+                    files.push({
+                        fname: file.name,
+                        fsize: file.size,
+                        ftype: file.type,
+                        fdata: res
+                    })
+                })
+                .catch((error) => console.log(error))
         }
-        setDocumentFileList(files)
+        let updateList = imageFileList.concat(files)
+        setImageFileList(updateList)
+    }
+
+    const pickDocumentFile = async (e) => {
+        let files = []
+        for (let i = 0; i < e.target.files.length; i++) {
+            let file = e.target.files[i]
+            await readFileDataAsBase64(file)
+                .then((res) => {
+                    files.push({
+                        fname: file.name,
+                        fsize: file.size,
+                        ftype: file.type,
+                        fdata: res
+                    })
+                })
+                .catch((error) => console.log(error))
+        }
+        let updateList = documentFileList.concat(files)
+        setDocumentFileList(updateList)
     }
 
     const removeImageFileFromList = (file) => {
@@ -85,6 +148,38 @@ const CreateNewPage = () => {
         setShowCalcModal(false)
     }
 
+    const submit = (e) => {
+        if (isSubmitAvailable) {
+            setLoadingActive(true)
+            let formData = {
+                title: smi_title,
+                originator: origin,
+                additional_originators: origins,
+                division: division,
+                department: department,
+                owner: owner,
+                improvement_area: area,
+                description: description,
+                cost_saving_amnt: (calcResult === '' ? 0 : parseInt(calcResult)),
+                cost_saving_doc: cost_description,
+                attachment_images: imageFileList,
+                attachment_docs: documentFileList
+            }
+
+            axios.post("/new", formData)
+                .then((res) => {
+                    if (!res.error) {
+                        setLoadingActive(false)
+                        navigate("/thank")
+                    }
+                })
+                .catch((error) => {
+                    setLoadingActive(false)
+                    console.log(error)
+                })
+        }
+    }
+
     return (
         <div className="page-new px-10">
             <p className="w-100 fs-20 fc-primary f-bold text-center">Suggested Methods Improvement (SMI)</p>
@@ -100,15 +195,15 @@ const CreateNewPage = () => {
             <form className="main-form mt-20">
                 <div className="d-flex align-items-center mt-2 px-10">
                     <p className="w-40 fs-20 fc-grey">Originator</p>
-                    <p className="w-60 fs-20 fc-black">Bon Rickles</p>
+                    <p className="w-60 fs-20 fc-black">{origin}</p>
                 </div>
                 <div className="d-flex align-items-center mt-2 px-10">
                     <p className="w-40 fs-20 fc-grey">Division</p>
-                    <p className="w-60 fs-20 fc-black">BLA</p>
+                    <p className="w-60 fs-20 fc-black">{division}</p>
                 </div>
                 <div className="d-flex align-items-center mt-2 px-10">
                     <p className="w-40 fs-20 fc-grey">Department</p>
-                    <p className="w-60 fs-20 fc-black">Office Services</p>
+                    <p className="w-60 fs-20 fc-black">{department}</p>
                 </div>
                 <div className="mt-2">
                     <div className={"form-section" + (smi_title==="" ? " border-red" : " border-green")}>
@@ -145,20 +240,20 @@ const CreateNewPage = () => {
                     </div>
                 </div>
                 <div className="mt-2">
-                    <div className={"form-section d-flex align-items-center" + (area==="" ? " border-red" : " border-green")}>
-                        <input className="input-control px-10 py-2" type="text" name="area" placeholder="Improvement Area" value={area} disabled />
+                    <div className={"form-section d-flex align-items-center" + (area === "" ? " border-red" : " border-green")}>
+                        <input className="input-control px-10 py-2" type="text" name="area" placeholder="Improvement Area" value={area === "" ? "" : area} disabled />
                         <button type="button" className="dropdown-menu-btn f-regular-italic mr-10" onClick={() => setDropdownOpen(!isDropdownOpen)}>Select</button>
-                        <div className={"dropdown-content" + (area==="" ? " border-red" : " border-green") + (isDropdownOpen ? " expand" : "")}>
+                        <div className={"dropdown-content" + (area === "" ? " border-red" : " border-green") + (isDropdownOpen ? " expand" : "")}>
                             <div className="d-flex justify-content-center py-1">
                                 <p className="fs-20 fc-grey f-regular-italic">Select one that best suits your SMI</p>
                             </div>
                             <ul className="dropdown-menus">
                                 {
-                                    areaList.map((value, i) => {
+                                    areaList.map((v, i) => {
                                         return (<li key={i}>
-                                            <label className="checkbox-item">{value}
+                                            <label className="checkbox-item">{v.value}
                                                 <input type="radio" name="radio" onChange={() => {
-                                                    setArea(value)
+                                                    setArea(v.value)
                                                     setDropdownOpen(false)
                                                 }} />
                                                 <span className="checkmark-radio"></span>
@@ -223,7 +318,7 @@ const CreateNewPage = () => {
                                     imageFileList.map((file, i) => {
                                         return (
                                             <div key={i} className="d-flex justify-content-between bordered-1 border-lightgrey w-100">
-                                                <p className="fs-16 fc-primary text-ellipsis px-10 py-1">{file.name}</p>
+                                                <p className="fs-16 fc-primary text-ellipsis px-10 py-1">{file.fname}</p>
                                                 <button type="button" className="border-none bg-red fc-white px-10" onClick={() => removeImageFileFromList(file)}>X</button>
                                             </div>
                                         )
@@ -249,7 +344,7 @@ const CreateNewPage = () => {
                                     documentFileList.map((file, i) => {
                                         return (
                                             <div key={i} className="d-flex justify-content-between bordered-1 border-lightgrey w-100">
-                                                <p className="fs-16 fc-primary text-ellipsis px-10 py-1">{file.name}</p>
+                                                <p className="fs-16 fc-primary text-ellipsis px-10 py-1">{file.fname}</p>
                                                 <button type="button" className="border-none bg-red fc-white px-10" onClick={() => removeDocumentFileFromList(file)}>X</button>
                                             </div>
                                         )
@@ -288,7 +383,11 @@ const CreateNewPage = () => {
                 </div>
                 <div className="mt-2">
                     <div className="form-section border-none d-flex justify-content-center mt-20">
-                        <button type="button" className={"submit-btn" + (isSubmitAvailable ? " bg-prim" : " bg-grey cursor-not-allowed")} onClick={(e) => isSubmitAvailable ? window.location.href = "/thank" : {}}>SUBMIT</button>
+                        <button type="button" className={"submit-btn w-50" + (isSubmitAvailable ? " bg-prim" : " bg-grey cursor-not-allowed")} onClick={submit}>
+                            {
+                                isLoadingActive ? <ReactLoading type="spin" color="#ffffff" height={'50px'} width={'50px'} /> : "SUBMIT"
+                            }
+                        </button>
                     </div>
                     <p className="w-100 text-center fs-16 fc-darkgrey f-regular-italic mt-10">
                     {

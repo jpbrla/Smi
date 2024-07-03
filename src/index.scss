@@ -211,7 +211,7 @@ p {
 }
 
 .return-icon {
-  width: 25px; 
+  width: 25px;
   height: 25px;
   margin-right: 10px;
 }
@@ -236,9 +236,52 @@ p {
 
   li {
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
     padding: 0px 10px;
+  }
+}
+
+
+//////////////////////////////////////////////////
+/// Dropdown
+/// //////////////////////////////////////////////
+.dropdown-content {
+  width: 100%;
+  position: absolute;
+  top: 105%;
+  border: 2px solid $c-red;
+  background-color: $c-white;
+  z-index: 1;
+  display: none;
+  transition: height .3s;
+
+  &.expand {
+      display: block;
+  }
+
+  & button {
+      width: auto;
+      padding: 0px 10px;
+      font-size: 15px;
+      color: $c-white;
+      border: none;
+      border-radius: 10px;
+  }
+
+  & .dropdown-menus {
+      width: 100%;
+      padding: 5px;
+      background-color: $c-white;
+      list-style: none;
+      margin: 0;
+
+      & > li {
+          color: $c-black;
+      }
+      & > li:hover {
+          background-color: rgba($color: $c-primary, $alpha: 0.12);
+      }
   }
 }
 
@@ -246,13 +289,14 @@ p {
 /// Custom Checkbox Item
 /// //////////////////////////////////////////////
 .checkbox-item {
+  width: 100%;
   display: flex;
   align-items: center;
   position: relative;
   padding-left: 35px;
   margin-bottom: 5px;
   cursor: pointer;
-  font-size: 25px;
+  font-size: 18px;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -274,8 +318,8 @@ p {
   top: 50%;
   left: 0;
   transform: translateY(-50%);
-  height: 20px;
-  width: 20px;
+  height: 25px;
+  width: 25px;
   background-color: #eee;
 }
 
