@@ -1,2 +1,1 @@
-# SMI app
- 
+# fuck bobrick
